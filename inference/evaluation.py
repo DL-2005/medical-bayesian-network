@@ -81,6 +81,10 @@ def evaluate(verbose=True):
     n          = len(results)
     top1_acc   = sum(r['top1_correct'] for r in results) / n
     top2_acc   = sum(r['top2_correct'] for r in results) / n
+    top3_acc   = sum(
+        r['true'] in [d for d, _ in r['ranked'][:3]]
+        for r in results
+    ) / n
     brier      = sum((1 - r['correct_p'])**2 for r in results) / n
 
     # Per-disease accuracy
@@ -125,8 +129,10 @@ def evaluate(verbose=True):
 
         # Summary metrics
         print(f"\n{'='*60}")
+        top3_count = sum(r['true'] in [d for d, _ in r['ranked'][:3]] for r in results)
         print(f"  Top-1 Accuracy : {top1_acc:.1%}  ({sum(r['top1_correct'] for r in results)}/{n})")
         print(f"  Top-2 Accuracy : {top2_acc:.1%}  ({sum(r['top2_correct'] for r in results)}/{n})")
+        print(f"  Top-3 Accuracy : {top3_acc:.1%}  ({top3_count}/{n})")
         print(f"  Brier Score    : {brier:.4f}  (thấp hơn = tốt hơn, best=0)")
         print(f"\n  Per-disease Top-1 Accuracy:")
         for d, (acc, cnt) in per_disease.items():
