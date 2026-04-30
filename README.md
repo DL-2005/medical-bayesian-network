@@ -186,14 +186,6 @@ The Reasoning Trace in the UI shows every multiplication step explicitly.
 
 ---
 
-## 👥 Team
 
-| ID | Name |
-|---|---|
-| 2351010040 | Lê Minh Đạt |
-| 2351010091 | Nguyễn Minh Nhật Hy |
-| 2351010125 | Nguyễn Minh Mẫn |
-
----
 
 *Advanced Artificial Intelligence — May 2026*
