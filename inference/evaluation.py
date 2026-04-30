@@ -36,6 +36,22 @@ TEST_CASES = [
     ({'Fatigue': True, 'Fever': True,  'Cough': True   }, 'COVID'),
     ({'Fever': True,  'Fatigue': True  }, 'COVID'),
     ({'Fatigue': True, 'Cough': True,  'Fever': True,  'Dyspnea': False, 'RunnyNose': False}, 'COVID'),
+
+    # --- Tuberculosis ---
+    ({'Fever': True, 'Cough': True, 'WeightLoss': True, 'NightSweats': True, 'LossOfAppetite': True}, 'Tuberculosis'),
+    ({'Cough': True, 'WeightLoss': True, 'Fatigue': True, 'NightSweats': True}, 'Tuberculosis'),
+
+    # --- Asthma ---
+    ({'Dyspnea': True, 'Cough': True, 'Fever': False, 'WeightLoss': False}, 'Asthma'),
+    ({'Dyspnea': True, 'Phlegm': True, 'Cough': True}, 'Asthma'),
+
+    # --- Allergy ---
+    ({'WateringEyes': True, 'RunnyNose': True, 'Fever': False}, 'Allergy'),
+    ({'WateringEyes': True, 'Chills': True, 'RunnyNose': True}, 'Allergy'),
+
+    # --- Bronchitis ---
+    ({'Cough': True, 'Phlegm': True, 'Dyspnea': True, 'Fever': False}, 'Bronchitis'),
+    ({'Cough': True, 'Phlegm': True, 'Fatigue': True}, 'Bronchitis'),
 ]
 
 
