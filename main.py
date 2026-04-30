@@ -50,8 +50,8 @@ def main():
 
 if __name__ == '__main__':
     main()
+    print("\n\n>>> EVALUATION & ANALYSIS:")
+    evaluate()
+    what_if_analysis({'Fever': True, 'Cough': True})
+    sensitivity_analysis()
 
-print("\n\n>>> EVALUATION & ANALYSIS:")
-evaluate()
-what_if_analysis({'Fever': True, 'Cough': True})
-sensitivity_analysis()
