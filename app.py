@@ -165,13 +165,22 @@ with tab1:
         st.caption("Chọn triệu chứng bệnh nhân đang có")
 
         symptom_labels = {
-            'Fever':      '🌡️ Sốt (Fever)',
-            'Cough':      '😮‍💨 Ho (Cough)',
-            'Fatigue':    '😴 Mệt mỏi (Fatigue)',
-            'SoreThroat': '🤒 Đau họng (Sore Throat)',
-            'Dyspnea':    '🫁 Khó thở (Dyspnea)',
-            'RunnyNose':  '🤧 Sổ mũi (Runny Nose)',
-        }
+    'Fever':          '🌡️ Sốt (Fever)',
+    'Cough':          '😮‍💨 Ho (Cough)',
+    'Fatigue':        '😴 Mệt mỏi (Fatigue)',
+    'SoreThroat':     '🤒 Đau họng (Sore Throat)',
+    'Dyspnea':        '🫁 Khó thở (Dyspnea)',
+    'RunnyNose':      '🤧 Sổ mũi (Runny Nose)',
+    'ChestPain':      '💔 Đau ngực (Chest Pain)',
+    'Chills':         '🥶 Ớn lạnh (Chills)',
+    'MuscleAches':    '💪 Đau cơ (Muscle Aches)',
+    'Headache':       '🤕 Đau đầu (Headache)',
+    'Phlegm':         '🫧 Đờm (Phlegm)',
+    'WeightLoss':     '⚖️ Sụt cân (Weight Loss)',
+    'LossOfAppetite': '🍽️ Chán ăn (Loss of Appetite)',
+    'NightSweats':    '💧 Đổ mồ hôi đêm (Night Sweats)',
+    'WateringEyes':   '👁️ Chảy nước mắt (Watering Eyes)',
+}
 
         evidence = {}
         for sym, label in symptom_labels.items():
